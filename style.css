@@ -12,11 +12,13 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    
 }
 
     header h1 {
         margin: 0;
         font-size: 2.5rem;
+        font-weight: bold;
     }
 
     header p {
@@ -25,7 +27,11 @@ header {
     }
 
 main {
-    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 500px 500px);
+    grid-gap: 200px;
+    grid-column-start: auto;
+    max-width: 1080px;
     margin: 2rem auto;
     padding: 0.1rem;
 }
