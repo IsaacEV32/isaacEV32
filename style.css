@@ -1,63 +1,192 @@
+@font-face {
+    src: url(fonts/Roboto-Light.ttf);
+    font-family: Roboto-Light;
+}
+
+@font-face {
+    src: url(fonts/Montserrat-Light.ttf);
+    font-family: Montserrat-Light;
+}
+
+@media screen and (max-width: 600px) {
+    .dropdown button {
+        top: 3%;
+        right: 2%;
+    }
+}
+
+#doomScrollerImg {
+    float: left;
+    margin-right: 10px;
+}
+
+#crossySlimeImg {
+    float: right;
+    margin-right: 10px;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Montserrat-Light, Helvetica, sans-serif;
     line-height: 1.6;
+    position: relative;
     margin: 0;
     padding: 0;
-    background-color: blueviolet;
-    color: aqua;
+    min-height: 100dvh;
+    background: linear-gradient(0deg, rgba(138, 43, 226, 1) 0%, rgba(87, 152, 250, 1) 100%);
+    color: #120727;
+    display: flow-root;
 }
 
 header {
+    font-family: Roboto-Light, Helvetica, sans-serif;
     background: #333;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
-    
 }
 
-    header h1 {
-        margin: 0;
-        font-size: 2.5rem;
-        font-weight: bold;
-    }
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
 
-    header p {
-        margin: 0.5rem 0 0;
-        font-style: italic;
-    }
+header h2 a:link {
+    color: #7fffd4;
+}
 
-main {
+header h2 a:hover {
+    color: #00ffff;
+    font-size: 1.1rem;
+}
+
+header h2 a:active {
+    color: #0000ff;
+    font-size: 1.1rem;
+}
+
+header h2 a:visited {
+    color: #9932cc;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-style: italic;
+}
+
+footer {
+    color: #7fff00;
+    position: absolute;
+    clear: both;
+    bottom: 0;
+    width: 100%;
+}
+
+.Portfolio-Projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 500px 500px);
-    grid-gap: 200px;
-    grid-column-start: auto;
-    max-width: 1080px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 200px;
+    max-width: 1600px;
     margin: 2rem auto;
-    padding: 0.1rem;
+    padding: 1rem;
+    justify-content: center;
 }
 
 .entrada-portfolio {
     background: #fff;
     padding: 1.5rem;
     margin-bottom: 2rem;
+    border-style: outset;
+    border-inline-color: #CADE01 #6924A5;
+    border-block-color: #CADE01 #6924A5;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,1);
+    box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.8);
+    overflow: auto;
 }
 
-    .entrada-portfolio h2 {
-        color: #007bff;
-        margin-top: 0;
-    }
-    .entrada-portfolio .fecha {
-        font-style: italic;
-        color: #777;
-        font-size: 0.9rem;
-    }
-    .entrada-portfolio a {
-        color:#007bff;
-        text-decoration: none;
-        font-weight: bold;
-    }
-        .entrada-portfolio a:hover {
-            text-decoration: underline;
-        }
+.entrada-portfolio h2 {
+    color: #120727;
+    margin-top: 0;
+    text-shadow: 3px 3px 4px;
+}
+
+.entrada-portfolio .fecha {
+    font-style: italic;
+    color: #120727;
+    font-size: 0.9rem;
+}
+
+.entrada-portfolio img:hover {
+    width: auto;
+    height: 210px;
+}
+
+.entrada-portfolio a {
+    color: #00008b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.entrada-portfolio a:hover {
+    text-decoration: underline;
+}
+
+
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown button {
+    min-width: 50px;
+    aspect-ratio: 1 / 1;
+    background-color: #6924A5;
+    border: 2px solid;
+    border-style: outset;
+    border-radius: 10px;
+    position: absolute;
+    top: 3vh;
+    right: 2vw;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.dropdown a {
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.dropdown .content {
+    display: none;
+    position: absolute;
+    background-color: #6924a5;
+    min-width: 400px;
+    height: 97%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    right: 0%;
+    top: 3%;
+}
+
+.dropdown ul {
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.dropdown a {
+    text-decoration: none;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.dropdown:hover .content {
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #a9a9a9;
+}
