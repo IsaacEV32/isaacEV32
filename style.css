@@ -1,3 +1,5 @@
+@import "aboutPageStyle.css";
+@import "projectsStyle.css";
 @font-face {
     src: url(fonts/Roboto-Light.ttf);
     font-family: Roboto-Light;
@@ -10,8 +12,16 @@
 
 @media screen and (max-width: 600px) {
     .dropdown button {
-        top: 3%;
-        right: 2%;
+        top: 3vh;
+        right: 2vw;
+    }
+
+    .personalInfo {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .projects{
+        margin: 4rem 2rem;
     }
 }
 
@@ -31,7 +41,7 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
-    min-height: 100dvh;
+    min-height: 100vh;
     background: linear-gradient(0deg, rgba(138, 43, 226, 1) 0%, rgba(87, 152, 250, 1) 100%);
     color: #120727;
     display: flow-root;
@@ -79,6 +89,10 @@ footer {
     position: absolute;
     clear: both;
     bottom: 0;
+    width: 100%;
+}
+hr{
+    border-color: #CADE01;
     width: 100%;
 }
 
@@ -163,10 +177,10 @@ footer {
     position: absolute;
     background-color: #6924a5;
     min-width: 400px;
-    height: 97%;
+    height: 100%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     right: 0%;
-    top: 3%;
+    top: 0%;
 }
 
 .dropdown ul {
