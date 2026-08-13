@@ -1,0 +1,27 @@
+.personalInfo {
+    max-width: 1600px;;
+    background: #fff;
+    padding: 1.5rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    margin-bottom: 2rem;
+    border-style: outset;
+    border-inline-color: #CADE01 #6924A5;
+    border-block-color: #CADE01 #6924A5;
+    border-radius: 8px;
+    box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.8);
+    overflow: auto;
+    justify-content: center;
+}
+
+.personalInfo h1 {
+    color: #120727;
+    margin-top: 0;
+    text-shadow: 3px 3px 4px;
+    text-align: center;
+}
+.personalInfo h2{
+    color: #120727;
+    margin-top: 0;
+    text-align: center;
+}
