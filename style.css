@@ -1,5 +1,6 @@
 @import "aboutPageStyle.css";
 @import "projectsStyle.css";
+
 @font-face {
     src: url(fonts/Roboto-Light.ttf);
     font-family: Roboto-Light;
@@ -20,11 +21,20 @@
         margin-left: 2rem;
         margin-right: 2rem;
     }
-    .projects{
+
+    .projects {
         margin: 4rem 2rem;
     }
 }
 
+@keyframes slideMenuLeft {
+    from {
+        transform: translateX(120%)
+    }
+}
+@keyframes glowHeader {
+    50%{ text-shadow:  4px 6px 5px rgb(220, 224, 13)}
+}
 #doomScrollerImg {
     float: left;
     margin-right: 10px;
@@ -59,6 +69,8 @@ header h1 {
     margin: 0;
     font-size: 2.5rem;
     font-weight: bold;
+    animation-name: glowHeader;
+    animation-duration: 2s;
 }
 
 header h2 a:link {
@@ -91,7 +103,8 @@ footer {
     bottom: 0;
     width: 100%;
 }
-hr{
+
+hr {
     border-color: #CADE01;
     width: 100%;
 }
@@ -173,6 +186,8 @@ hr{
 }
 
 .dropdown .content {
+    animation-name: slideMenuLeft;
+    animation-duration: 1s;
     display: none;
     position: absolute;
     background-color: #6924a5;
